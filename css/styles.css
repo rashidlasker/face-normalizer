@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+body {
+    font-family: 'Lato';
+    background-color: #f0f0f0;
+    margin: 0px auto;
+    max-width: 1150px;
+}
+
+#overlay, #webgl {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -o-transform : scaleX(-1);
+    -webkit-transform : scaleX(-1);
+    transform : scaleX(-1);
+    -ms-filter : fliph; /*IE*/
+    filter : fliph; /*IE*/
+
+}
+
+#videoel {
+    -o-transform : scaleX(-1);
+    -webkit-transform : scaleX(-1);
+    transform : scaleX(-1);
+    -ms-filter : fliph; /*IE*/
+    filter : fliph; /*IE*/
+
+}
+
+#container {
+    position : relative;
+    width : 667px;
+}
+
+#content {
+    margin-top : 50px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+h2 {
+    font-weight : 400;
+}
+
+.masks {
+    display: none;
+}
+
+.btn {
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+#webgl2 {
+    display : none;
+}
+
+#controls {
+    text-align : center;
+    display : none !important;
+}
