@@ -186,6 +186,14 @@ function startVideo() {
     drawGridLoop();
 }
 
+function screencap() {
+
+    baseCanvas = webgl_overlay.getContext('2d');
+    baseCanvas.drawImage(webgl_overlay2,0,0)
+    console.log(baseCanvas.toDataURL('png'));
+    
+}
+
 var fd = new faceDeformer();
 var fd2 = new faceDeformer();
 
