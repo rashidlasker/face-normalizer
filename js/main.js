@@ -1,22 +1,22 @@
 
 var images = [
-    {"id":"average",    "path":"./media/average2_crop.jpg"},
-    {"id":"terminator", "path":"./media/terminator_crop.jpg"},
-    {"id":"walter2",    "path":"./media/walter2_crop.jpg"},
-    {"id":"clooney2",   "path":"./media/fragrance-George-Clooney-main_crop.jpg"},
-    {"id":"bieber",     "path":"./media/Justin-Bieber2_crop.jpg"},
-    {"id":"kim",        "path":"./media/kim1_crop.jpg"},
-    {"id":"rihanna",    "path":"./media/ri_1_crop.jpg"},
-    {"id":"audrey",     "path":"./media/audrey_crop.jpg"},
-    {"id":"bill",       "path":"./media/bill-murray-snl_crop.jpg"},
-    {"id":"connery2",   "path":"./media/sean_guru2_crop.jpg"},
-    {"id":"cage3",      "path":"./media/cage2_crop.jpg"},
-    {"id":"queen",      "path":"./media/queen20_crop.jpg"},
-    {"id":"obama4",     "path":"./media/obama4_crop.jpg"},
-    {"id":"chuck",      "path":"./media/chuck_crop.jpg"},
-    {"id":"monalisa",   "path":"./media/joconde_crop.jpg"},
-    {"id":"picasso1",   "path":"./media/picasso_drawing_crop.jpg"},
-    {"id":"scream",     "path":"./media/scream_crop.jpg"}
+{"id":"average",    "path":"./media/average2_crop.jpg"},
+{"id":"terminator", "path":"./media/terminator_crop.jpg"},
+{"id":"walter2",    "path":"./media/walter2_crop.jpg"},
+{"id":"clooney2",   "path":"./media/fragrance-George-Clooney-main_crop.jpg"},
+{"id":"bieber",     "path":"./media/Justin-Bieber2_crop.jpg"},
+{"id":"kim",        "path":"./media/kim1_crop.jpg"},
+{"id":"rihanna",    "path":"./media/ri_1_crop.jpg"},
+{"id":"audrey",     "path":"./media/audrey_crop.jpg"},
+{"id":"bill",       "path":"./media/bill-murray-snl_crop.jpg"},
+{"id":"connery2",   "path":"./media/sean_guru2_crop.jpg"},
+{"id":"cage3",      "path":"./media/cage2_crop.jpg"},
+{"id":"queen",      "path":"./media/queen20_crop.jpg"},
+{"id":"obama4",     "path":"./media/obama4_crop.jpg"},
+{"id":"chuck",      "path":"./media/chuck_crop.jpg"},
+{"id":"monalisa",   "path":"./media/joconde_crop.jpg"},
+{"id":"picasso1",   "path":"./media/picasso_drawing_crop.jpg"},
+{"id":"scream",     "path":"./media/scream_crop.jpg"}
 ];
 
 // when everything is ready, automatically start everything ?
@@ -186,13 +186,7 @@ function startVideo() {
     drawGridLoop();
 }
 
-function screencap() {
 
-    baseCanvas = webgl_overlay.getContext('2d');
-    baseCanvas.drawImage(webgl_overlay2,0,0)
-    console.log(baseCanvas.toDataURL('png'));
-    
-}
 
 var fd = new faceDeformer();
 var fd2 = new faceDeformer();
@@ -248,58 +242,58 @@ for (var i = 0;i < images.length;i++) {
 }
 
 var extended_vertices = [
-    [0,71,72,0],
-    [0,72,1,0],
-    [1,72,73,1],
-    [1,73,2,1],
-    [2,73,74,2],
-    [2,74,3,2],
-    [3,74,75,3],
-    [3,75,4,3],
-    [4,75,76,4],
-    [4,76,5,4],
-    [5,76,77,5],
-    [5,77,6,5],
-    [6,77,78,6],
-    [6,78,7,6],
-    [7,78,79,7],
-    [7,79,8,7],
-    [8,79,80,8],
-    [8,80,9,8],
-    [9,80,81,9],
-    [9,81,10,9],
-    [10,81,82,10],
-    [10,82,11,10],
-    [11,82,83,11],
-    [11,83,12,11],
-    [12,83,84,12],
-    [12,84,13,12],
-    [13,84,85,13],
-    [13,85,14,13],
-    [14,85,86,14],
-    [14,86,15,14],
-    [15,86,87,15],
-    [15,87,16,15],
-    [16,87,88,16],
-    [16,88,17,16],
-    [17,88,89,17],
-    [17,89,18,17],
-    [18,89,90,18],
-    [18,90,22,18],
-    [22,90,21,22],
-    [21,90,91,21],
-    [21,20,91,21],
-    [20,91,92,20],
-    [20,92,19,20],
-    [19,92,93,19],
-    [19,93,71,19],
-    [19,0,71,19],
-    [44,61,56,44],
-    [60,61,56,60],
-    [60,56,57,60],
-    [60,59,57,60],
-    [58,59,57,58],
-    [58,59,50,58]
+[0,71,72,0],
+[0,72,1,0],
+[1,72,73,1],
+[1,73,2,1],
+[2,73,74,2],
+[2,74,3,2],
+[3,74,75,3],
+[3,75,4,3],
+[4,75,76,4],
+[4,76,5,4],
+[5,76,77,5],
+[5,77,6,5],
+[6,77,78,6],
+[6,78,7,6],
+[7,78,79,7],
+[7,79,8,7],
+[8,79,80,8],
+[8,80,9,8],
+[9,80,81,9],
+[9,81,10,9],
+[10,81,82,10],
+[10,82,11,10],
+[11,82,83,11],
+[11,83,12,11],
+[12,83,84,12],
+[12,84,13,12],
+[13,84,85,13],
+[13,85,14,13],
+[14,85,86,14],
+[14,86,15,14],
+[15,86,87,15],
+[15,87,16,15],
+[16,87,88,16],
+[16,88,17,16],
+[17,88,89,17],
+[17,89,18,17],
+[18,89,90,18],
+[18,90,22,18],
+[22,90,21,22],
+[21,90,91,21],
+[21,20,91,21],
+[20,91,92,20],
+[20,92,19,20],
+[19,92,93,19],
+[19,93,71,19],
+[19,0,71,19],
+[44,61,56,44],
+[60,61,56,60],
+[60,56,57,60],
+[60,59,57,60],
+[58,59,57,58],
+[58,59,50,58]
 ];
 
 function drawGridLoop() {
@@ -405,3 +399,52 @@ function createMasking(canvas, modelpoints) {
 // document.addEventListener("clmtrackrIteration", function(event) {
 //     stats.update();
 // }, false);
+
+
+/*********** Code for newstuff **********/
+
+function screencap() {
+    var hidden_canvas = document.querySelector('#combine'),
+    context = hidden_canvas.getContext('2d');
+
+    var width = vid.videoWidth,
+    height = vid.videoHeight;
+
+    if (width && height) {
+        // Setup a canvas with the same dimensions as the video.
+        hidden_canvas.width = width;
+        hidden_canvas.height = height;
+
+        // Make a copy of the current frame in the video on the canvas.
+        context.drawImage(vid, 0, 0, width, height);
+
+        // Turn the canvas image into a dataURL that can be used as a src for our photo.
+        console.log(hidden_canvas.toDataURL('image/png'));
+    }
+    context.drawImage(webgl_overlay, 0, 0, width, height);
+    var img = hidden_canvas.toDataURL('image/png');
+
+
+    var headers = {
+       "app_id"          : "ad48aba9",
+       "app_key"         : "fc67b8b3c454213c8e9dfc1dd3f7fa23"
+    };
+    var payload  = { "image" : img , "gallery_name":"MyGallery", "subject_id":"Rashid"};
+    var url = "http://api.kairos.com/verify";
+    // make request 
+    $.ajax(url, {
+       headers  : headers,
+       type: "POST",
+       data: JSON.stringify(payload),
+       dataType: "text"
+    }).done(function(response){
+       console.log(response);
+       // if(JSON.parse(response).images[0].transaction.confidence > 0.6){
+       //     co"Match! Confidence score: " + JSON.parse(response).images[0].transaction.confidence;
+       // } else {
+       //     response_message.innerText = "No Match."
+       // }
+
+    });
+
+}
