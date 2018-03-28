@@ -75,6 +75,11 @@ body {
     max-width: 1150px;
 }
 
+
+.masks{
+    display: none;
+}
+
 #webgl2 {
     display : none;
 }
