@@ -1,3 +1,9 @@
+# Face Normalizer
+
+![application gif](https://raw.githubusercontent.com/rashidlasker/face-normalizer/master/media/facemask-optimized.gif "Application")
+
+Welcome to our HackUVA project! This project won the grand prize in the Equality track for the hackathon.
+
 ## The Problem
 As we enter an age that is progressively more defined by artificial intelligence and machine learning, we must come to terms with some of their limitations. The past few years have been rife with news about racial biases within AI algorithms. One of the primary problems with AI today is how it can manifest inherent human biases in actual applications. As more of these errors occur, they will only serve to further disenfranchise specific groups within our society. 
 
