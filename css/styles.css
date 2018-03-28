@@ -44,6 +44,7 @@ body {
 #overlay, #webgl {
     width: 100%;
     position: absolute;
+    filter: brightness(.8);
     top: 0px;
     left: 0px;
     opacity: 0.5;
@@ -52,7 +53,6 @@ body {
     transform : scaleX(-1);
     -ms-filter : fliph; /*IE*/
     filter : fliph; /*IE*/
-
 }
 
 #videoel {
