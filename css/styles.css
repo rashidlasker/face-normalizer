@@ -47,7 +47,6 @@ body {
     filter: brightness(.8);
     top: 0px;
     left: 0px;
-    opacity: 0.5;
     -o-transform : scaleX(-1);
     -webkit-transform : scaleX(-1);
     transform : scaleX(-1);
@@ -81,6 +80,13 @@ body {
     display: none;
 }
 
-#webgl2 {
-    display : none;
+.column{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.column canvas{
+    width: 95%;
+    height: auto;
 }

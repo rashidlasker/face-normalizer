@@ -17,9 +17,22 @@
                 </video>
                 <canvas id="overlay" width="1000" height="700"></canvas>
                 <canvas id="webgl" width="1000" height="700"></canvas>
+                <canvas id="webgl" width="1000" height="700"></canvas>
             </div>
-
-            <img id="average" class="masks" src="./media/average.png"></img>
+            <div id="controls">
+            	<a href="#" onclick="screencap()">Click me!</a>
+            </div>
+            <div class="column column-nomask">
+            	<h3 class="column-title">Before</h3>
+            	<canvas id="nomask" width="1000" height="700"></canvas>
+            	<!-- <p id="before64"></p> -->
+            </div><div class="column column-combine">
+            	<h3 class="column-title">After</h3>
+            	<canvas id="combine" width="1000" height="700"></canvas>
+            	<!-- <p id="after64"></p> -->
+            </div>
+            
+            <img id="average" class="masks" src="./media/average-transparent.png"></img>
 
             <script src="./js/libs/dat.gui.min.js"></script>
             <script src="./js/libs/utils.js"></script>
