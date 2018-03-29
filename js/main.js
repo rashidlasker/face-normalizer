@@ -234,7 +234,7 @@ function screencap() {
     };
     var nomask_payload  = { "image" : nomask_img};
     var combine_payload  = { "image" : combine_img};
-    var url = "http://api.kairos.com/detect";
+    var url = "https://api.kairos.com/detect";
     $.ajax(url, {
        headers  : headers,
        type: "POST",
