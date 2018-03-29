@@ -167,6 +167,7 @@ function drawMaskLoop() {
             mask_image = cloneCanvas(webgl_overlay);
         }
     }
+    document.getElementById('controls').classList.remove("hidden");
     animationRequest = requestAnimFrame(drawMaskLoop);
 }
 
@@ -198,6 +199,9 @@ function cloneCanvas(oldCanvas) {
 /*===================================================================================================================================================*/
 
 function screencap() {
+    document.getElementById('results').classList.remove("hidden");
+    document.getElementById('nomask-title').innerHTML = 'Before';
+    document.getElementById('combine-title').innerHTML = 'After';
     var combine_canvas = document.querySelector('#combine'),
     combine_context = combine_canvas.getContext('2d');
     var nomask_canvas = document.querySelector('#nomask'),
@@ -207,7 +211,7 @@ function screencap() {
     height = vid.videoHeight;
 
     if (width && height) {
-        // Setup a canvas with the same dimensions as the video.
+        // Setup canvases with the same dimensions as the video.
         combine_canvas.width = width;
         combine_canvas.height = height;
         nomask_canvas.width = width;
@@ -215,36 +219,42 @@ function screencap() {
 
         // Make a copy of the current frame in the video on the canvas.
         combine_context.drawImage(vid, 0, 0, width, height);
+        combine_context.drawImage(mask_image, 0, 0, width, height);
         nomask_context.drawImage(vid, 0, 0, width, height);
 
         // Turn the canvas image into a dataURL that can be used as a src for our photo.
-        //document.getElementById("before64").innerHTML = combine_canvas.toDataURL('image/png');
+        var combine_img = combine_canvas.toDataURL('image/png');
+        var nomask_img = nomask_canvas.toDataURL('image/png');
     }
-    combine_context.drawImage(mask_image, 0, 0, width, height);
-    //document.getElementById("after64").innerHTML = combine_canvas.toDataURL('image/png');
-    //var img = combine_canvas.toDataURL('image/png');
 
+    var headers = {
+        "Content-type"     : "application/json",
+        "app_id"          : "ad48aba9",
+        "app_key"         : "fc67b8b3c454213c8e9dfc1dd3f7fa23",
+    };
+    var nomask_payload  = { "image" : nomask_img};
+    var combine_payload  = { "image" : combine_img};
+    var url = "http://api.kairos.com/detect";
+    $.ajax(url, {
+       headers  : headers,
+       type: "POST",
+       data: JSON.stringify(nomask_payload),
+       dataType: "text"
+    }).done(function(response){
+        console.log('nomask results:')
+        console.log(response);
+        document.getElementById("nomask-json").innerHTML = JSON.stringify(JSON.parse(response), undefined, 2);
+    });
 
-    // var headers = {
-    //    "app_id"          : "ad48aba9",
-    //    "app_key"         : "fc67b8b3c454213c8e9dfc1dd3f7fa23"
-    // };
-    // var payload  = { "image" : img , "gallery_name":"MyGallery", "subject_id":"Rashid"};
-    // var url = "http://api.kairos.com/verify";
-    // make request 
-    // $.ajax(url, {
-    //    headers  : headers,
-    //    type: "POST",
-    //    data: JSON.stringify(payload),
-    //    dataType: "text"
-    // }).done(function(response){
-    //    console.log(response);
-    //    // if(JSON.parse(response).images[0].transaction.confidence > 0.6){
-    //    //     co"Match! Confidence score: " + JSON.parse(response).images[0].transaction.confidence;
-    //    // } else {
-    //    //     response_message.innerText = "No Match."
-    //    // }
-
-    // });
+    $.ajax(url, {
+       headers  : headers,
+       type: "POST",
+       data: JSON.stringify(combine_payload),
+       dataType: "text"
+    }).done(function(response){
+        console.log('combine results:')
+        console.log(response);
+        document.getElementById("combine-json").innerHTML = JSON.stringify(JSON.parse(response), undefined, 2);
+    });
 
 }

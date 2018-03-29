@@ -17,21 +17,22 @@
                 </video>
                 <canvas id="overlay" width="1000" height="700"></canvas>
                 <canvas id="webgl" width="1000" height="700"></canvas>
-                <canvas id="webgl" width="1000" height="700"></canvas>
             </div>
-            <div id="controls">
+            <div id="controls" class="hidden">
             	<a href="#" onclick="screencap()">Click me!</a>
             </div>
-            <div class="column column-nomask">
-            	<h3 class="column-title">Before</h3>
-            	<canvas id="nomask" width="1000" height="700"></canvas>
-            	<!-- <p id="before64"></p> -->
-            </div><div class="column column-combine">
-            	<h3 class="column-title">After</h3>
-            	<canvas id="combine" width="1000" height="700"></canvas>
-            	<!-- <p id="after64"></p> -->
+            <div id="results" class="hidden">
+	            <div class="column column-nomask">
+	            	<h3 id="nomask-title" class="column-title"></h3>
+	            	<canvas id="nomask" width="1000" height="700"></canvas>
+	            	<pre id="nomask-json"></pre>
+	            </div><div class="column column-combine">
+	            	<h3 id="combine-title" class="column-title"></h3>
+	            	<canvas id="combine" width="1000" height="700"></canvas>
+	            	<pre id="combine-json"></pre>
+	            </div>
             </div>
-            
+
             <img id="average" class="masks" src="./media/average-transparent.png"></img>
 
             <script src="./js/libs/dat.gui.min.js"></script>
@@ -41,7 +42,8 @@
             <script src="./models/model_pca_20_svm.js"></script>
             <script src="./js/libs/Stats.js"></script>
             <script src="./js/face_deformer.js"></script>
-            <script src="./js/main.js" type="text/javascript"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="./js/main.js" type="text/javascript"></script>
         </div>
     </body>
 </html>
