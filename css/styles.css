@@ -44,7 +44,6 @@ body {
 #overlay, #webgl {
     width: 100%;
     position: absolute;
-    filter: brightness(.8);
     top: 0px;
     left: 0px;
     -o-transform : scaleX(-1);
